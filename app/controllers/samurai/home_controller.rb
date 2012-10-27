@@ -9,5 +9,11 @@ module Samurai
       @links = Url.all
     end
 
+
+    def seotags
+      @tags = SeoTags.new
+
+      render "seo_tags"
+    end
   end
 end

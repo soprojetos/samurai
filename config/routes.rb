@@ -3,4 +3,5 @@ Samurai::Engine.routes.draw do
 
   root :to => "home#index"
   match '/links' => "home#links"
+  match '/seo_tags' => "home#seotags"
 end
