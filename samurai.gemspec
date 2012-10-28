@@ -7,11 +7,11 @@ require "samurai/version"
 Gem::Specification.new do |s|
   s.name        = "samurai"
   s.version     = Samurai::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Samurai."
-  s.description = "TODO: Description of Samurai."
+  s.authors     = ["Nando Sousa"]
+  s.email       = ["nandosousafr@gmail.com"]
+  s.homepage    = "nandosousa.blog.br"
+  s.summary     = "Seo Helper"
+  s.description = "Scratching my own itch"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
