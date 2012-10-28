@@ -1,7 +1,7 @@
 module Samurai
   class Engine < ::Rails::Engine
     isolate_namespace Samurai
-    initializer "shiny-ninja.facebook" do
+    initializer "samurai.tags" do
       ActionView::Base.send :include, Samurai::Tags
     end
   end

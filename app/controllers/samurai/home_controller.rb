@@ -11,8 +11,8 @@ module Samurai
 
 
     def seotags
-      @tags = SeoTags.new
-
+      @samurai = Samurai::PerformTags.new
+      @tags = @samurai.record
       render "seo_tags"
     end
   end

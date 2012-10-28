@@ -1,59 +1,30 @@
-<div class="span3">
-  <div class="span3 bs-docs-sidebar">
-    <span> Static </span>
-    <ul class="nav nav-list bs-docs-sidenav affix-top">
-      <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-      <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
-      <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
-      <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
-      <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
-    </ul>
-  </div>
+<h2> Static Pages</h2>
+<table class="table table-bordered">
+  <tr>
+    <th> Page Namespace </th>
+  </tr>
 
-  <div class="span3 bs-docs-sidebar">
-    <span> Models </span>
-    <ul class="nav nav-list bs-docs-sidenav affix-top">
-      <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-      <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
-      <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
-      <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
-      <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
-    </ul>
-  </div>
-</div>
+  <% for tag in @samurai.static %>
+    <tr>
+      <td> <%= tag %> </td>
+    <tr>
+  <% end %>
+</table>
 
 
+<h2> Dynamic Pages</h2>
+<table class="table table-bordered">
+  <tr>
+    <th> Model </th>
+    <th> Page Namespace </th>
+  </tr>
 
-<div class="span7">
-  <%= form_for @tags, :url => "", :html => {:class=> "form-horizontal"} do |f| %>
-    <div class="control-group">
-      <%= f.label :title, :class=> "control-label" %>
-      <div class="controls">
-        <%= f.text_area :title, :rows => 6, :class=>"input-xxlarge" %>
-      </div>
-    </div>
-
-
-    <div class="control-group">
-      <%= f.label :description, :class=> "control-label" %>
-      <div class="controls">
-        <%= f.text_area :description, :rows => 6, :class=>"input-xxlarge" %>
-      </div>
-    </div>
-
-
-
-    <div class="control-group">
-      <%= f.label :canonical, :class=> "control-label" %>
-      <div class="controls">
-        <%= f.text_field :title, :rows => 6, :class=> "input-xxlarge" %>
-        <hr>
-        <%= f.submit "Submit", :class=> "btn btn-warning btn-large pull-right" %>
-      </div>
-    </div>
-
-
-
-<% end %>
-
-
+  <% @samurai.models.each_key do |model|%>
+    <% @samurai.models[model].each do |page| %>
+      <tr>
+        <td> <%= model %> </td>
+        <td> <%= page.humanize %> </td>
+      <tr>
+    <% end %>
+  <% end %>
+</table>

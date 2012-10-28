@@ -1,7 +1,5 @@
 <% content_for :samurai_tags do %>
-   <%= seo_title "hello" %>
-   <%= seo_meta(:description,  "Hello World") %>
-   <%= seo_canonical(root_url) %>
+   <%= seo_meta_group(:root, :title, :description, :canonical) %>
 <% end %>   
 
 <h1>Home#index</h1>

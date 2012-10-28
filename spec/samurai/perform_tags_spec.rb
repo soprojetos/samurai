@@ -10,5 +10,6 @@ describe Samurai::PerformTags do
   subject {tags}
 
   it { subject.static.should be_kind_of(Array) }
+  it { subject.models.should be_kind_of(Hash) }
 
 end
