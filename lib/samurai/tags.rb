@@ -4,7 +4,7 @@ module Samurai::Tags
     content_tag(:title, content)
   end
 
-  def seo_meta(name=:description, content)
+  def seo_meta(name, content)
     tag(:meta , :name => name, :content => content)
   end
 
@@ -60,6 +60,7 @@ module Samurai::Tags
   end
 
   def parse_attribute(obj, config)
+
   end
 
 
