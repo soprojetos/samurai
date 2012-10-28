@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Samurai::VERSION
   s.authors     = ["Nando Sousa"]
   s.email       = ["nandosousafr@gmail.com"]
-  s.homepage    = "nandosousa.blog.br"
+  s.homepage    = "http://nandosousa.blog.br"
   s.summary     = "Seo Helper"
   s.description = "Scratching my own itch"
 
