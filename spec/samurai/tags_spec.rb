@@ -22,13 +22,11 @@ describe "::Tags" do
   it "#attribute_and_size" do
     attribute_and_size("Soprojetos - @title(17)").should == {"title" => 17}
     attribute_and_size("Soprojetos - @title(17),@description(5)").should == {"title" => 17, "description"=> 5}
-    attribute_and_size("Soprojetos - @title(17)", :).should
+
   end
 
 
   it "seo_meta_model" do
-    attribute = parse_attribute(record, "Soprojetos - @title(17),@description(5)")
-    attribute.should == "Soprojetos - dasdfasdfsadf"
 
   end
 
