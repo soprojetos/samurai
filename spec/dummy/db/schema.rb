@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121027224115) do
+ActiveRecord::Schema.define(:version => 20121028023509) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20121027224115) do
     t.text     "properties"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "model"
+    t.integer  "record_id"
   end
 
   create_table "samurai_urls", :force => true do |t|

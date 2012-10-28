@@ -1,5 +1,5 @@
 <div class="span7">
-  <%= form_for @tags, :url => "", :html => {:class=> "form-horizontal"} do |f| %>
+  <%= form_for @tags, :url => edit_tag_path, :html => {:class=> "form-horizontal"} do |f| %>
     <div class="control-group">
       <%= f.label :title, :class=> "control-label" %>
       <div class="controls">
@@ -20,7 +20,7 @@
     <div class="control-group">
       <%= f.label :canonical, :class=> "control-label" %>
       <div class="controls">
-        <%= f.text_field :title, :rows => 6, :class=> "input-xxlarge" %>
+        <%= f.text_field :canonical, :rows => 6, :class=> "input-xxlarge" %>
         <hr>
         <%= f.submit "Submit", :class=> "btn btn-warning btn-large pull-right" %>
       </div>

@@ -15,5 +15,16 @@ module Samurai
       @tags = @samurai.record
       render "seo_tags"
     end
+
+
+    def edit
+      @tags = SeoTag.where(:key => params[:key]).first_or_initialize
+
+      if params[:seo_tag]
+        @tags.update_attributes(params[:seo_tag])
+      end
+    end
+
+
   end
 end

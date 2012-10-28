@@ -6,25 +6,10 @@
 
   <% for tag in @samurai.static %>
     <tr>
-      <td> <%= tag %> </td>
+      <td> <%= link_to tag, edit_tag_path(:key => tag)  %> </td>
     <tr>
   <% end %>
 </table>
 
 
-<h2> Dynamic Pages</h2>
-<table class="table table-bordered">
-  <tr>
-    <th> Model </th>
-    <th> Page Namespace </th>
-  </tr>
 
-  <% @samurai.models.each_key do |model|%>
-    <% @samurai.models[model].each do |page| %>
-      <tr>
-        <td> <%= model %> </td>
-        <td> <%= page.humanize %> </td>
-      <tr>
-    <% end %>
-  <% end %>
-</table>

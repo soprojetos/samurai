@@ -1,4 +1,14 @@
 static: [root, cms ]
 models:
-  post: [post_page, project_show_up]
+   post:
+      -
+         post_page:
+            title: Soprojetos - @title(13)
+            description: Soprojetos - @title(1)
+      -
+         post_release: 
+            title: Soprojetos - @title(17)
+            description: Soprojetos - @title(17)
+            
+
 
