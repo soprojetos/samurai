@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     samurai (0.0.1)
-      rails (~> 3.2.8)
 
 GEM
   remote: http://rubygems.org/
@@ -121,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
+  rails (>= 3.2.8)
   rspec-rails
   samurai!
   sqlite3
