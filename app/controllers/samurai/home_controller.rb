@@ -18,13 +18,16 @@ module Samurai
 
 
     def edit
-      @tags = SeoTag.where(:key => params[:key]).first_or_initialize
+      @tags = SeoTag.where(key: params[:key]).first_or_initialize
 
       if params[:seo_tag]
-        @tags.update_attributes(params[:seo_tag])
+        @tags.update_attributes(tag_params[:seo_tag])
       end
     end
-
-
+  
+    def tag_params
+      params.permit({seo_tag: [:title, :description, :canonical]})
+    end
   end
 end
+
