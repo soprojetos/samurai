@@ -9,7 +9,7 @@ module Samurai::Tags
   end
 
   def seo_canonical(permalink)
-    tag(:link, :rel => :canonical, :href => permalink) unless permalink == request.original_url
+    tag(:link, :rel => :canonical, :href => permalink)
   end
 
   def hold_tag(tag,content)
